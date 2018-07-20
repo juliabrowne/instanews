@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  background: black;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: white;
+  line-height: 1.2;
+  padding: 0px;
+}
+
+ //the container enveloping my entire html
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  position: relative;
+  height: 310px;
+  margin: 0 auto;
+  max-width: 1240px;
+}
+
+.header {
+  max-width: 600px;
+  height: auto;
+  padding: 30px;
+  transition: height .5s ease;
+}
+
+.logo {
+  height: 50%;
+}
+
+.logo img {
+  max-width: 100%;
+}
+
+.menu-container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+.choose-section {
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+#sections {
+  cursor: pointer;
+}

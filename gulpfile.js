@@ -8,7 +8,7 @@ var gulp = require('gulp'),
   autoprefixer = require('gulp-autoprefixer'),
   cssnano = require('gulp-cssnano'),
   rename = require('gulp-rename'),
-  prettyError= require ('gulp-prettyerror');
+  prettyError= require('gulp-prettyerror');
 
 
 
@@ -78,7 +78,7 @@ gulp.task('browser-sync', function () {
 // watch function watches JS so it can run scripts
 gulp.task('watch', function () {
   gulp.watch('js/*.js', gulp.series('scripts'));
-  gulp.watch('sass//**/*.scss', gulp.series('sass'));
+  gulp.watch('sass/**/*.scss', gulp.series('sass'));
 });
 
 

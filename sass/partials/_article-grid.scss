@@ -1,0 +1,22 @@
+.article-grid {
+  height: auto;
+  width: 100%;
+}
+
+.new-cell {
+  height: 700px;
+  width: 100%;
+  position: relative;
+  }
+
+.bg-img {
+    height: 700px;
+    display: flex;
+    flex-flow: column-reverse wrap;
+    background-position: center;
+  }
+
+.art-text {
+  background-color: rgba(black, 0.2);
+}
+
