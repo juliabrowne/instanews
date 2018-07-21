@@ -1,15 +1,30 @@
 $(document).ready(function () {
 
+
+  $(window).resize(function() {
+    console.log($(window).width());
+  });
+
+
   $('#sections').on('change', function () {
 
-    //try appending loading gif
+    var loader = '<div id="loading-gif">';
+    loader += '<img src="../images/ajax-loader.gif" alt="Loading Gif">';
+    loader += '</div>';
 
+    
+    //try appending loading gif
+    
     // add class to header
     // to reduce size of logo
-
+    
+    
+    
     var selectedStory = $('#sections').val();
-
+    
+    $('.article-grid').append(loader);
     $('.article-grid').empty();
+ 
 
 
     //url for our API request
@@ -47,6 +62,7 @@ $(document).ready(function () {
           html += '<p>' + artText + '</p>' + '</div>' + '</a>';
           html += '</div>';
 
+          $('.article-grid').remove('#loading-gif');
           $('.article-grid').append(html);
 
         }); // end of .each
@@ -56,6 +72,8 @@ $(document).ready(function () {
         console.log(err);
       })
       .always(function () {
+        $('#loading-gif').remove();
+
         //try removing or detaching the loading gif
       }); // end of .ajax
 

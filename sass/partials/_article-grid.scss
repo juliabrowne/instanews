@@ -1,22 +1,55 @@
 .article-grid {
-  height: auto;
   width: 100%;
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    @include desktop {
+      display: flex;
+      flex-wrap: wrap;
+    }
 }
+
+
+// tablet size
+// display: flex
+// wrap
+// width: 50%;
+
+// desktop size
+// display: flex;
+// wrap
+// width: 25%
 
 .new-cell {
   height: 700px;
   width: 100%;
+  @include tablet {
+    width: 50%;
+  }
+  @include desktop {
+    width: 25%;
+  }
   position: relative;
   }
 
 .bg-img {
-    height: 700px;
-    display: flex;
-    flex-flow: column-reverse wrap;
-    background-position: center;
+  height: 100%;
+  width: 100%;
   }
 
 .art-text {
   background-color: rgba(black, 0.2);
+  position: absolute;
+  bottom: 0;
 }
 
+// try adding position absolute
+// top 50%, left 50%
+#loading-gif {
+  width: 20px;
+  height: auto;
+  img {
+    max-width: 100%;
+  }
+}
