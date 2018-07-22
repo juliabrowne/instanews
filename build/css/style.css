@@ -403,18 +403,11 @@ body {
       display: flex;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; } }
-  .article-grid a {
-    color: white; }
-    .article-grid a:hover {
-      color: white; }
 
 .new-cell {
   height: 420px;
   width: 100%;
-  position: relative;
-  line-height: 1.5rem;
-  font-size: 16px;
-  color: white; }
+  position: relative; }
   @media (min-width: 600px) {
     .new-cell {
       width: 50%; } }
@@ -430,11 +423,19 @@ body {
 .art-text {
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
-  bottom: 0; }
+  bottom: 0px;
+  line-height: 1.5rem;
+  font-size: 16px;
+  color: white;
+  padding: 10px;
+  text-align: justify; }
 
 #loading-gif {
   width: 40px;
-  height: auto; }
+  height: auto;
+  position: absolute;
+  top: 50%;
+  bottom: 50%; }
   #loading-gif img {
     max-width: 100%; }
 
@@ -443,3 +444,5 @@ footer p {
   font-weight: 300;
   font-size: 14px;
   color: #c2c2c2; }
+  footer p .copyright {
+    text-transform: uppercase; }
