@@ -8,7 +8,7 @@ $(document).ready(function () {
 
   $('#sections').on('change', function () {
 
-    var loader = '<div id="loading-gif">';
+    var loader = '<div class="loading-gif">';
     loader += '<img src="../images/ajax-loader.gif" alt="Loading Gif">';
     loader += '</div>';
 
@@ -48,7 +48,6 @@ $(document).ready(function () {
           html += '</div>';
 
 
-          $('.article-grid').remove('#loading-gif');
           $('.article-grid').append(html);
 
         }); // end of .each
@@ -58,7 +57,7 @@ $(document).ready(function () {
         console.log(err);
       })
       .always(function () {
-        $('#loading-gif').remove();
+        $('.loading-gif').remove();
 
 
     

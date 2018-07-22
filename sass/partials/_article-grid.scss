@@ -37,32 +37,15 @@
   color: white;
   padding: 10px;
   text-align: justify;
-  // display: none;
-
-  // transition: all .7s ease-in-out .03s;
-  // @include tablet {
-  //   bottom: -200px;
-  //   transition: all .7s ease-in-out .03s;
-  // }
-  // @include desktop {
-  //   bottom: -200px;
-  //   transition: all .7s ease-in-out .03s;
-  // }
 }
 
-
-
-
-
-
-// try adding position absolute
-// top 50%, left 50%
-#loading-gif {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.loading-gif {
+  height: 50px;
+  width: 50px;
+  display: absolute;
+  margin-left: 50%;
+  // margin-top: 50%;c
+  transform: translate(-50%);
   img {
     max-width: 100%;
   }

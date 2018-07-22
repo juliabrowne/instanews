@@ -26,28 +26,21 @@ body {
 .header {
   max-width: 600px;
   height: auto;
-  padding: 30px;
+  padding: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  // align-content: center;
   text-align: center;
   @include tablet {
     flex-direction: row;
     justify-content: normal;
-    // align-content: normal;
     text-align: normal;
   }
   @include desktop {
     flex-direction: row;
     justify-content: normal;
-    // align-content: normal;
     text-align: normal;
   }
-}
-
-.logo {
-  height: 50%;
 }
 
 .logo img {
@@ -61,12 +54,15 @@ body {
   @include desktop {
     height: 90px;
     width: 90px;
-    margin-left: 100px;
+    margin-left: 20px;
   }
 }
 
 .menu-container {
   @include tablet {
+    margin-left: 100px;
+  }
+  @include desktop {
     margin-left: 100px;
   }
 }
