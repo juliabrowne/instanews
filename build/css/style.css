@@ -403,11 +403,18 @@ body {
       display: flex;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; } }
+  .article-grid a {
+    color: white; }
+    .article-grid a:hover {
+      color: white; }
 
 .new-cell {
-  height: 700px;
+  height: 420px;
   width: 100%;
-  position: relative; }
+  position: relative;
+  line-height: 1.5rem;
+  font-size: 16px;
+  color: white; }
   @media (min-width: 600px) {
     .new-cell {
       width: 50%; } }
@@ -417,15 +424,16 @@ body {
 
 .bg-img {
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  background-position: 50% 50%; }
 
 .art-text {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   bottom: 0; }
 
 #loading-gif {
-  width: 20px;
+  width: 40px;
   height: auto; }
   #loading-gif img {
     max-width: 100%; }
