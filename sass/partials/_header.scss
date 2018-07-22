@@ -12,7 +12,7 @@ body {
   padding: 0px;
 }
 
- //the container enveloping my entire html
+ //the container enveloping the entire html
 .container {
   display: flex;
   flex-flow: column nowrap;
@@ -27,7 +27,23 @@ body {
   max-width: 600px;
   height: auto;
   padding: 30px;
-  transition: height .5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // align-content: center;
+  text-align: center;
+  @include tablet {
+    flex-direction: row;
+    justify-content: normal;
+    // align-content: normal;
+    text-align: normal;
+  }
+  @include desktop {
+    flex-direction: row;
+    justify-content: normal;
+    // align-content: normal;
+    text-align: normal;
+  }
 }
 
 .logo {
@@ -35,18 +51,29 @@ body {
 }
 
 .logo img {
-  max-width: 100%;
+  height: 180px;
+  width: 180px;
+  @include tablet {
+    height: 90px;
+    width: 90px;
+    margin-left: 100px;
+  }
+  @include desktop {
+    height: 90px;
+    width: 90px;
+    margin-left: 100px;
+  }
 }
 
 .menu-container {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
+  @include tablet {
+    margin-left: 100px;
+  }
 }
 
 .choose-section {
   margin-bottom: 15px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 100;
 }
 

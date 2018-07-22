@@ -358,30 +358,62 @@ body {
   max-width: 600px;
   height: auto;
   padding: 30px;
-  -webkit-transition: height .5s ease;
-  transition: height .5s ease; }
-
-.logo {
-  height: 50%; }
-
-.logo img {
-  max-width: 100%; }
-
-.menu-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  text-align: center; }
+  @media (min-width: 600px) {
+    .header {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: normal;
+          -ms-flex-pack: normal;
+              justify-content: normal;
+      text-align: normal; } }
+  @media (min-width: 1240px) {
+    .header {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: normal;
+          -ms-flex-pack: normal;
+              justify-content: normal;
+      text-align: normal; } }
+
+.logo {
+  height: 50%; }
+
+.logo img {
+  height: 180px;
+  width: 180px; }
+  @media (min-width: 600px) {
+    .logo img {
+      height: 90px;
+      width: 90px;
+      margin-left: 100px; } }
+  @media (min-width: 1240px) {
+    .logo img {
+      height: 90px;
+      width: 90px;
+      margin-left: 100px; } }
+
+@media (min-width: 600px) {
+  .menu-container {
+    margin-left: 100px; } }
 
 .choose-section {
   margin-bottom: 15px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 100; }
 
 #sections {
@@ -432,17 +464,27 @@ body {
 
 #loading-gif {
   width: 40px;
-  height: auto;
-  position: absolute;
-  top: 50%;
-  bottom: 50%; }
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
   #loading-gif img {
     max-width: 100%; }
 
 footer p {
   text-align: center;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 16px;
+  padding: 50px;
   color: #c2c2c2; }
   footer p .copyright {
     text-transform: uppercase; }
+  @media (min-width: 1240px) {
+    footer p {
+      text-align: left; } }
