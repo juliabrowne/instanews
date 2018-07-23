@@ -354,6 +354,37 @@ body {
   margin: auto;
   min-height: 100vh; }
 
+.header {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  @media (min-width: 600px) {
+    .header {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; } }
+  @media (min-width: 1240px) {
+    .header {
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; } }
+  .header .logo img {
+    height: 250px;
+    width: 250px; }
+
 .header-change {
   max-width: 600px;
   height: auto;
@@ -389,40 +420,39 @@ body {
           -ms-flex-pack: normal;
               justify-content: normal;
       text-align: normal; } }
-
-.logo img {
-  height: 180px;
-  width: 180px; }
-  @media (min-width: 600px) {
-    .logo img {
-      height: 90px;
-      width: 90px;
-      margin-left: 100px; } }
-  @media (min-width: 1240px) {
-    .logo img {
-      height: 90px;
-      width: 90px;
-      margin-left: 20px; } }
+  .header-change .logo img {
+    height: 180px;
+    width: 180px; }
+    @media (min-width: 600px) {
+      .header-change .logo img {
+        height: 90px;
+        width: 90px;
+        margin-left: 100px; } }
+    @media (min-width: 1240px) {
+      .header-change .logo img {
+        height: 90px;
+        width: 90px;
+        margin-left: 20px; } }
 
 @media (min-width: 600px) {
   .menu-container {
-    margin-left: 100px; } }
+    margin-left: 30px; } }
 
 @media (min-width: 1240px) {
   .menu-container {
-    margin-left: 100px; } }
+    margin-left: 30px; } }
 
 .choose-section {
   margin-bottom: 15px;
-  font-size: 16px;
+  margin-top: 20px;
+  font-size: 18px;
   font-weight: 100; }
 
 #sections {
   cursor: pointer;
-  border-radius: 0;
+  font-size: 18px;
   border: white;
-  background-color: darkgrey;
-  color: white; }
+  color: darkslategrey; }
 
 .article-grid {
   width: 100%; }

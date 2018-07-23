@@ -12,7 +12,6 @@ $(document).ready(function () {
       }
 
     $('.header').addClass('header-change');
-    $('.footer').addClass('footer-change');
 
     $('.article-grid').empty(); //this clears the content
     $('.article-grid').append(loader);
