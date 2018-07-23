@@ -40,14 +40,11 @@ gulp.task('lint', function () {
 //lints -> uglifies/minifies
 gulp.task('scripts', gulp.series('lint', function() {
   return gulp
-    .src('./js/*.js') // these are the files gulp will consume
-    .pipe(uglify()) // call uglify function on these files
+    .src('./js/*.js') //these are the files gulp will consume
+    .pipe(uglify()) //call uglify function on these files
     .pipe(rename({
       extname: '.min.js'
-    })) // this keeps the first part                                     
-     // and changes just the                                           
-     // extension name at the end                                      
-     // after the period
+    }))
     .pipe(gulp.dest('./build/js'));
 })
 );
