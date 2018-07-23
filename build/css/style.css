@@ -445,12 +445,12 @@ body {
 .menu-container .choose-section {
   margin-bottom: 15px;
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 100; }
 
 .menu-container #sections {
   cursor: pointer;
-  font-size: 18px;
+  font-size: 14px;
   border: white;
   color: darkslategrey; }
 
