@@ -1,6 +1,8 @@
 * {
   box-sizing: border-box;
   outline: none;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -10,17 +12,12 @@ body {
   color: white;
   line-height: 1.2;
   padding: 0px;
-}
-
- //the container enveloping the entire html
-.container {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   position: relative;
-  height: 310px;
-  margin: 0 auto;
-  max-width: 1240px;
+  height: auto;
+  margin: auto;
 }
 
 .header {
@@ -42,6 +39,12 @@ body {
     text-align: normal;
   }
 }
+
+
+.header-change {
+
+}
+
 
 .logo img {
   height: 180px;

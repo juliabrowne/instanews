@@ -13,13 +13,13 @@
 .new-cell {
   height: 420px;
   width: 100%;
+  position: relative;
   @include tablet {
     width: 50%;
   }
   @include desktop {
     width: 25%;
   }
-  position: relative;
 }
 
 .bg-img {

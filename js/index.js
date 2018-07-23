@@ -13,6 +13,8 @@ $(document).ready(function () {
     loader += '</div>';
 
     var selectedStory = $('#sections').val();
+    $(".header").addClass("header-change");
+    $(".footer").addClass("footer-change");
 
     $('.article-grid').empty();
     $('.article-grid').append(loader);
@@ -54,7 +56,6 @@ $(document).ready(function () {
       })
       .fail(function (err) {
         alert('Oops, something went wrong. Please try again!');
-        console.log(err);
       })
       .always(function () {
         $('.loading-gif').remove();
