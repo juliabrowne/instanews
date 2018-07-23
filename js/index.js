@@ -4,7 +4,7 @@ $(document).ready(function () {
 
     //variable for loading gif
     var loader = '<div class="loading-gif">';
-    loader += '<img src="../../images/ajax-loader.gif" alt="Loading Gif">';
+    loader += '<img src="./images/ajax-loader.gif" alt="Loading Gif">';
     loader += '</div>';
 
     //variable for header change when "Sections..." is selected
