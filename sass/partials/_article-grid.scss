@@ -25,11 +25,17 @@
 .bg-img {
   height: 100%;
   width: 100%;
-  background-position: 50% 50%;
+  background-position: 90% 10%;
   &:hover {
     .art-text {
       opacity: 1;
     }
+  }
+  @include tablet {
+    background-position: 50% 10%;
+  }
+  @include desktop {
+    background-position: 50% 50%;
   }
 }
 
