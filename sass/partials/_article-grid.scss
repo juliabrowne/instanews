@@ -29,7 +29,7 @@
   &:hover {
     .art-text {
       opacity: 1;
-   }
+    }
   }
 }
 
@@ -46,14 +46,14 @@
   transition: .3s;
 }
 
-  .loading-gif {
-    height: 50px;
-    width: 50px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%);
-    img {
-      max-width: 100%;
-    }
-    position: absolute;
-  } 
+.loading-gif {
+  height: 50px;
+  width: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  img {
+    max-width: 100%;
+  }
+  position: absolute;
+}

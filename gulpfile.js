@@ -1,5 +1,3 @@
-
-// Modules you need!
 var gulp = require('gulp'),
   uglify = require('gulp-uglify'),
   browserSync = require('browser-sync'),
@@ -8,11 +6,9 @@ var gulp = require('gulp'),
   autoprefixer = require('gulp-autoprefixer'),
   cssnano = require('gulp-cssnano'),
   rename = require('gulp-rename'),
-  prettyError= require('gulp-prettyerror');
+  prettyError = require('gulp-prettyerror');
 
-
-
-// SASS TASKS
+//SASS TASKS
 gulp.task('sass', function() {
   return gulp
     .src('./sass/style.scss')
@@ -29,8 +25,7 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('./build/css'));
 });
 
-
-// LINTING TASKS
+//LINTING TASKS
 gulp.task('lint', function () {
   return (gulp
     .src('./js/*.js') // attaches lint to file
@@ -40,10 +35,9 @@ gulp.task('lint', function () {
   );
 });
 
-
-// SCRIPTS
-// has one dependency on Lint Task
-// lints -> uglifies/minifies
+//SCRIPTS
+//has one dependency on Lint Task
+//lints -> uglifies/minifies
 gulp.task('scripts', gulp.series('lint', function() {
   return gulp
     .src('./js/*.js') // these are the files gulp will consume
@@ -58,11 +52,10 @@ gulp.task('scripts', gulp.series('lint', function() {
 })
 );
 
-
-// BROWSERSYNC
-// making a browsersync task
-// reading a local server to run the refresh
-// watches build folder (and html) and reloads
+//BROWSERSYNC
+//making a browsersync task
+//reading a local server to run the refresh
+//watches build folder (and html) and reloads
 gulp.task('browser-sync', function () {
   browserSync.init({
     server: {
@@ -73,19 +66,14 @@ gulp.task('browser-sync', function () {
     .on('change', browserSync.reload);
 });
 
-
-// WATCH
-// watch function watches JS so it can run scripts
+//WATCH
+//watch function watches JS so it can run scripts
 gulp.task('watch', function () {
   gulp.watch('js/*.js', gulp.series('scripts'));
   gulp.watch('sass/**/*.scss', gulp.series('sass'));
 });
 
-
-// DEFAULT
-// runs browsersync and watches
-// don't need lint because lint already runs on scripts
+//DEFAULT
+//runs browsersync and watches
+//don't need lint because lint already runs on scripts
 gulp.task('default', gulp.parallel('browser-sync', 'watch'));
-
-
-

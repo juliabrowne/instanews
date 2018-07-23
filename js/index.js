@@ -2,10 +2,12 @@ $(document).ready(function () {
 
   $('#sections').on('change', function () {
 
+    //variable for loading gif
     var loader = '<div class="loading-gif">';
     loader += '<img src="../images/ajax-loader.gif" alt="Loading Gif">';
     loader += '</div>';
 
+    //variable for header change when "Sections..." is selected
     var selectedStory = $('#sections').val();
       if (selectedStory === ' ') {
         location.reload();
@@ -28,16 +30,16 @@ $(document).ready(function () {
         url: url,
         method: 'GET'
       })
+      //data.results are filtered to only show articles that have images
       .done(function (data) {
-        // data.results are filtered to only show articles that have images
         var filterResults = data.results.filter(function (result) {
           return result.multimedia;
         }).slice(0, 12);
 
         $.each(filterResults, function (key, value) {
-          var artLink = value.url;
-          var artImg = value.multimedia[4].url;
-          var artText = value.abstract;
+          var artLink = value.url; //variable for link
+          var artImg = value.multimedia[4].url; //variable for image
+          var artText = value.abstract; //variable for text
           var html = '<div class="new-cell">';
 
           html += '<a href="' + artLink + '">';
@@ -46,10 +48,9 @@ $(document).ready(function () {
           html += '<p>' + artText + '</p>' + '</div></div>' + '</a>';
           html += '</div>';
 
-
           $('.article-grid').append(html);
 
-        }); // end of .each
+        }); //end of .each
       })
       .fail(function (err) {
         alert('Oops, something went wrong. Please try again!');
@@ -57,8 +58,8 @@ $(document).ready(function () {
       .always(function () {
         $('.loading-gif').remove();
 
-      }); // end of .ajax
+      }); //end of .ajax
 
-  }); // #sections change event
+  }); //end of #sections change event
 
-}); // end of doc ready
+}); //end of doc ready
