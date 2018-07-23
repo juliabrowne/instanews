@@ -1,11 +1,5 @@
 $(document).ready(function () {
 
-  // $(window).resize(function () {
-  // console.log($(window).width()); 
-  // }); 
-  // add class to header
-  // to reduce size of logo
-
   $('#sections').on('change', function () {
 
     var loader = '<div class="loading-gif">';
@@ -13,11 +7,15 @@ $(document).ready(function () {
     loader += '</div>';
 
     var selectedStory = $('#sections').val();
-    $(".header").addClass("header-change");
-    $(".footer").addClass("footer-change");
+    // $(".header").addClass("header-change");
+    // $(".footer").addClass("footer-change");
 
-    $('.article-grid').empty();
+    $('.article-grid').empty(); //this clears the content
     $('.article-grid').append(loader);
+
+    // $('.logo').addClass('small-logo');
+    // $('.header').addClass('header-size');
+
 
     //url for API request
     var url = 'https://api.nytimes.com/svc/topstories/v2/' + selectedStory + '.json';
