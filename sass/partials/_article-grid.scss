@@ -26,6 +26,11 @@
   height: 100%;
   width: 100%;
   background-position: 50% 50%;
+  &:hover {
+    .art-text {
+      opacity: 1;
+   }
+  }
 }
 
 .art-text {
@@ -37,15 +42,18 @@
   color: white;
   padding: 10px;
   text-align: justify;
+  opacity: 0;
+  transition: .3s;
 }
 
-.loading-gif {
-  height: 50px;
-  width: 50px;
-  margin-left: 50%;
-  transform: translate(-50%);
-  img {
-    max-width: 100%;
-  }
-}
-
+  .loading-gif {
+    height: 50px;
+    width: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    img {
+      max-width: 100%;
+    }
+    position: absolute;
+  } 

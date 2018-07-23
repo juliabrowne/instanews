@@ -14,13 +14,19 @@ body {
   padding: 0px;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: space-between;
   position: relative;
   height: auto;
   margin: auto;
+  min-height: 100vh;
 }
 
+
 .header {
+  
+}
+
+.header-change {
   max-width: 600px;
   height: auto;
   padding: 50px;
@@ -72,4 +78,8 @@ body {
 
 #sections {
   cursor: pointer;
+  border-radius: 0;
+  border: white;
+  background-color: darkgrey;
+  color: white;
 }
