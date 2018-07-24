@@ -485,15 +485,9 @@ body {
 .bg-img {
   height: 100%;
   width: 100%;
-  background-position: 90% 10%; }
+  background-position: center; }
   .bg-img:hover .art-text {
     opacity: 1; }
-  @media (min-width: 600px) {
-    .bg-img {
-      background-position: 50% 10%; } }
-  @media (min-width: 1000px) {
-    .bg-img {
-      background-position: 50% 50%; } }
 
 .art-text {
   background-color: rgba(0, 0, 0, 0.5);
