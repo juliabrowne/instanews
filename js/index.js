@@ -9,9 +9,9 @@ $(document).ready(function () {
 
     //variable for header change when "Sections..." is selected
     var selectedStory = $('#sections').val();
-      if (selectedStory === ' ') {
-        location.reload();
-      }
+    if (selectedStory === ' ') {
+      location.reload();
+    }
 
     $('.header').addClass('header-change');
 
@@ -43,7 +43,7 @@ $(document).ready(function () {
           var html = '<div class="new-cell">';
 
           html += '<a href="' + artLink + '">';
-          html += '<div class="bg-img" style="background-image: url(' + artImg + '); background-size: cover;">';
+          html += '<div class="bg-img" style="background-image: url(' + artImg + '); background-size: cover; background-position: center;">';
           html += '<div class="art-text">';
           html += '<p>' + artText + '</p>' + '</div></div>' + '</a>';
           html += '</div>';
